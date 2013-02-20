@@ -44,7 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="..\CommonAssemblyInfo.cs">
+      <Link>CommonAssemblyInfo.cs</Link>
+    </Compile>
     <Compile Include="WebApiFluentValidationModelValidator.cs" />
     <Compile Include="WebApiFluentValidationModelValidatorProvider.cs" />
   </ItemGroup>
@@ -53,6 +55,9 @@
       <Project>{dae0249b-4f69-4ac9-9a17-aa23e0795316}</Project>
       <Name>FluentValidation</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

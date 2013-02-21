@@ -37,11 +37,12 @@ namespace FluentValidation.WebApi
 		private readonly IValidatorFactory _factory;
 
 		/// <summary>
-		/// Constructor
+		/// Constructor for use with a Validator Factory
 		/// </summary>
 		/// <param name="validatorProviders">Existing Validator Providers</param>
 		/// <param name="factory">Factory for creating the underlying validator</param>
-		public WebApiFluentValidationModelValidator(IEnumerable<ModelValidatorProvider> validatorProviders, IValidatorFactory factory)
+		public WebApiFluentValidationModelValidator(IEnumerable<ModelValidatorProvider> validatorProviders, 
+			IValidatorFactory factory)
 			: base(validatorProviders)
 		{
 			if (factory == null) { throw new ArgumentNullException("factory"); }

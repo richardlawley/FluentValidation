@@ -10,6 +10,7 @@
 			$(BaseDir)\src\FluentValidation.Tests\bin\$(Configuration)\FluentValidation.Tests.dll;
 			$(BaseDir)\src\FluentValidation.Tests.Mvc3\bin\$(Configuration)\FluentValidation.Tests.Mvc3.dll;
 			$(BaseDir)\src\FluentValidation.Tests.Mvc4\bin\$(Configuration)\FluentValidation.Tests.Mvc4.dll;
+			$(BaseDir)\src\FluentValidation.Tests.WebApi\bin\$(Configuration)\FluentValidation.Tests.WebApi.dll;
 		</TestAssemblies>
 		<MSBuildExtensions>$(BaseDir)\lib\msbuild\msbuild.community.tasks.dll</MSBuildExtensions>
 	</PropertyGroup>

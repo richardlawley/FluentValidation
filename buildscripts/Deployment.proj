@@ -31,6 +31,7 @@
 		<Copy SourceFiles="@(MainBinaries)" DestinationFolder="$(OutputDir)\FluentValidation\%(RecursiveDir)"  />
 		<Copy SourceFiles="@(Mvc3Binaries)" DestinationFolder="$(OutputDir)\MVC\MVC3" />
 		<Copy SourceFiles="@(Mvc4Binaries)" DestinationFolder="$(OutputDir)\MVC\MVC4" />
+		<Copy SourceFiles="@(WebApiBinaries)" DestinationFolder="$(OutputDir)\MVC\WebApi" />
 		<Copy SourceFiles="@(SilverlightBinaries)" DestinationFolder="$(OutputDir)\Silverlight\SL5\%(RecursiveDir)"  Condition="'$(BuildSilverlight)' == 'true'"/>
 		<Copy SourceFiles="@(Silverlight4Binaries)" DestinationFolder="$(OutputDir)\Silverlight\SL4\%(RecursiveDir)"  Condition="'$(BuildSilverlight)' == 'true'"/>
 		
@@ -51,9 +52,7 @@
 		<!-- First copy the nuspec template files to the package dir -->
 		<Copy SourceFiles="$(MSBuildProjectDirectory)\FluentValidation$(PackageSuffix).nuspec" DestinationFolder="$(PackageDir)\temp\FluentValidation$(PackageSuffix)" />
 		<Copy SourceFiles="$(MSBuildProjectDirectory)\FluentValidation.MVC3$(PackageSuffix).nuspec" DestinationFolder="$(PackageDir)\temp\FluentValidation.MVC3$(PackageSuffix)" />
-		
 		<Copy SourceFiles="$(MSBuildProjectDirectory)\FluentValidation.MVC4$(PackageSuffix).nuspec" DestinationFolder="$(PackageDir)\temp\FluentValidation.MVC4$(PackageSuffix)" />
-
 		<Copy SourceFiles="$(MSBuildProjectDirectory)\FluentValidation.WebApi$(PackageSuffix).nuspec" DestinationFolder="$(PackageDir)\temp\FluentValidation.WebApi$(PackageSuffix)" />
 
 		<!-- Copy the source files to the package dir -->
